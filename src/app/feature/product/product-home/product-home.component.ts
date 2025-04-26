@@ -85,7 +85,7 @@ export class ProductHomeComponent implements OnInit {
   }
 
   applyFilters(): void {
-    // Crear el objeto de filtros
+    // objeto de filtros
     const filters: any = {};
 
     if (this.nameFilter) {
@@ -102,7 +102,7 @@ export class ProductHomeComponent implements OnInit {
 
     console.log('Aplicando filtros:', filters);
 
-    // Llamar al servicio con los filtros
+    // metododel service con los filtros
     this.productService.getAll(filters).subscribe(res => {
       this.dataSource = res.data;
     });

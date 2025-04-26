@@ -14,7 +14,7 @@ export class ProductService {
   getAll(filters?: { name?: string, state?: string, currency_code?: string }) {
     let params = new HttpParams().set('active', 'true');
 
-    // Añadir filtros adicionales si están presentes
+    // parametros para los filtros
     if (filters) {
       if (filters.name) {
         params = params.set('name', filters.name);
